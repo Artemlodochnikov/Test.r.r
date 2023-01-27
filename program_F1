@@ -1,0 +1,31 @@
+a = int(input("kolvo Chelovek "))
+s = 0
+whey = []
+for i in range(0, a):
+    n = int(input("Vozrast "))
+    if n <= 3:
+        s = s + 0
+        v = input("name ")
+        whey.append(v)
+        z = "malenki"
+    if n <= 12 and n > 3:
+        s = s + 14
+        v = input("name ")
+        whey.append(v)
+        z = "rebonok"
+    if n > 12 and n < 65:
+        s = s + 23
+        v = input("name ")
+        whey.append(v)
+        z = "Vzroslyi"
+    if n >= 65:
+        s = s + 18
+        v = input("name ")
+        whey.append(v)
+        z = "Penseoner"
+print(s, whey)
+s = str(s)
+with open('Zooo.txt', 'a', encoding="UTF-8") as file:
+    file.write(f"{whey[i]} \n")
+    file.write(f"Bilet v zoopark tarif:{z} \n")
+    file.write(f"Chena bileta:{s} \n")
